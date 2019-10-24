@@ -1,0 +1,18 @@
+<html>
+<head><title>Button Demo</title></head>
+<body>
+    <p id='demo'>Hello!</p>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <script>
+       function myFunction(){
+           var x=document.getElementById('demo');
+           if(x.innerHTML=="Hello!"){
+               x.innerHTML="Well done!";
+           }
+           else{
+               x.innerHTML="Hello!";
+           }
+       }
+    </script>
+</body>
+</html>

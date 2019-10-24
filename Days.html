@@ -1,0 +1,31 @@
+<html>
+<head><title>days</title><link rel="stylesheet" href="Days.css">
+<body>
+    <p id='demo'>Monday</p>
+    <p id='demo1'>January</p>
+    <button type="button" onclick="Days()">Change Day</button>
+    <span>
+        <button type="button" onclick="Months()">Change Month</button>
+    </span>
+    <script>
+       var index=0;
+       var day=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+       var month_index = 0 ;
+       var names_of_months = [ "January", "February", "March", "April","May", "June", "July", "August","September", "October", "November", "December" ] ;
+       function Days(){
+           var x=document.getElementById('demo');
+           if(x.innerHTML===day[index]){
+               index+=1;
+               x.innerHTML=day[index%7];
+           }
+       }
+       function Months(){
+           var x=document.getElementById('demo1');
+           if(x.innerHTML===names_of_months[month_index]){
+               month_index+=1;
+               x.innerHTML=names_of_months[month_index%12];
+           }
+       }
+    </script>
+</body>
+</html>

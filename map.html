@@ -1,0 +1,25 @@
+<html>
+    <script>
+        function map(f,a){
+            var result=[];
+            for(var i=0;i!=a.length;i++)
+                result[i]=f(a[i]);
+            return result;
+        }
+        var f=function(x){
+            return x*x*x;
+        }
+        var numbers=[0,1,2,5,10];
+        var cube=map(f,numbers);
+        document.write(cube+'<br>');
+        function myconcat(sep){
+            var res='';
+            for(var i=0;i<arguments.length;i++){
+                res+=arguments[i]+sep;
+            }
+            document.write(res+'<br>');
+        }
+        myconcat(', ','mango','banana','kiwi');
+        myconcat('; ','mango','banana');
+    </script>
+</html>
