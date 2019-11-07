@@ -1,0 +1,3 @@
+exports.Mydate=()=>{
+    return Date();
+};
